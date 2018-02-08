@@ -7,7 +7,10 @@ const notes = require('./notes');
 const argv = yargs.argv;
 const command = argv._[0];
 let note = {};
-const messageNote = nota => `--\nTitle: ${nota.title}\nBody: ${nota.body}`;
+const messageNote = nota => {
+  debugger;
+  return `--\nTitle: ${nota.title}\nBody: ${nota.body}`;
+};
 
 if (command === 'add') {
   note = notes.addNote(argv.title, argv.body);

@@ -28,7 +28,7 @@ const addNote = (title, body) => {
 
 const getAll = () => console.log('Getting all notes');
 
-const getNote = title => console.log('Getting note', title);
+const getNote = title => fetchNotes().find(note => note.title === title);
 
 const removeNote = title => {
   const notes = fetchNotes();

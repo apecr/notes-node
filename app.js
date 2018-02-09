@@ -20,8 +20,9 @@ if (command === 'add') {
     console.log(messageNote(note));
   }
 } else if (command === 'list') {
-  console.log(`Printing ${notes.getAll().length} note(s).`);
-  notes.getAll().forEach(element => {
+  const allNotes = notes.getAll();
+  console.log(`Printing ${allNotes.length} note(s).`);
+  allNotes.forEach(element => {
     console.log(`Note found\n${messageNote(element)}`);
   });
 } else if (command === 'read') {

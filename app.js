@@ -8,7 +8,6 @@ const argv = yargs.argv;
 const command = argv._[0];
 let note = {};
 const messageNote = nota => {
-  debugger;
   return `--\nTitle: ${nota.title}\nBody: ${nota.body}`;
 };
 

@@ -26,7 +26,6 @@ const addNote = (title, body) => {
   }
 };
 
-const getAll = () => console.log('Getting all notes');
 
 const getNote = title => fetchNotes().find(note => note.title === title);
 
@@ -39,7 +38,7 @@ const removeNote = title => {
 
 module.exports = {
   addNote,
-  getAll,
+  getAll: fetchNotes,
   getNote,
   removeNote
 };

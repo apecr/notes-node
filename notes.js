@@ -32,7 +32,7 @@ const getNote = title => fetchNotes().find(note => note.title === title);
 const removeNote = title => {
   const notes = fetchNotes();
   const filteredNotes = notes.filter(note => note.title !== title);
-  saveNotes(notes);
+  saveNotes(filteredNotes);
   return notes.length !== filteredNotes.length;
 };
 
